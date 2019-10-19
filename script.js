@@ -14,7 +14,7 @@ $('form').on('submit', function(event) {
 //trying out proxy server
 recipeApp.getActivity = function() {  
 $.ajax({
-    url: 'http://proxy.hackeryou.com',
+    url: 'https://proxy.hackeryou.com',
     dataType: 'json',
     method:'GET',
     data: {
