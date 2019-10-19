@@ -56,6 +56,12 @@ div {
     padding: 20px 0;
 }
 
+.dietTypes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .submit {
     padding-top: 40px;
 }
@@ -98,6 +104,7 @@ input[type=radio]+label {
     border: 2px solid rgba(105, 235, 208, 1);
     border-radius: 3px;
     padding: 5px;
+    margin: 5px;
     line-height: 4rem;
 }
 
