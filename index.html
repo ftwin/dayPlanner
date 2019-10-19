@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day Planner</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat+Alternates&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="insideContainer">
+            <h1>Day planner for the chronically indecisive</h1>
+            <h2>Answer a few questions to get a recipe and an activity to try today:</h2>
+            
+            <form action="#" id="recipe">
+
+                <div>
+                    <label for="ingredient">Suggest an ingredient or two (separate with commas):</label>
+                    <input type="text" placeholder="butter, sugar, milk" name="ingredient">
+                </div>
+
+                <div>
+                    <p>Choose an eating style:</p>
+
+                    <input type="radio" name="diet" id="noPreference" value="">
+                    <label for="noPreference">Everything</label>
+
+                    <input type="radio" name="diet" id="glutenFree" value="Gluten Free">
+                    <label for="glutenFree">Gluten Free</label>
+
+                    <input type="radio" name="diet" id="ketogenic" value="ketogenic">
+                    <label for="ketogenic">Ketogenic</label>
+
+                    <input type="radio" name="diet" id="vegetarian" value="vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                    
+                    <input type="radio" name="diet" id="vegan" value="vegan">
+                    <label for="vegan">Vegan</label>
+                    
+                    <input type="radio" name="diet" id="pescetarian" value="pescetarian">
+                    <label for="pescetarian">Pescatarian</label>
+                    
+                    <input type="radio" name="diet" id="paleo" value="paleo">
+                    <label for="paleo">Paleo</label>
+                    
+                    <input type="radio" name="diet" id="primal" value="primal">
+                    <label for="primal">Primal</label>
+                    
+                    <input type="radio" name="diet" id="whole30" value="whole 30">
+                    <label for="whole30">Whole 30</label>
+                </div>
+
+                <div>
+                    <p>How energetic are you feeling today?</p>
+                
+                    <input type="radio" name="active" id="notActive" value="notActive">
+                    <label for="notActive">Not very energetic</label>
+
+                    <input type="radio" name="active" id="active" value="active">
+                    <label for="active">Pretty energetic</label>
+                </div>
+                
+                <div  class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+                    
+            </form>
+
+            <div>
+                <p class="results"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
