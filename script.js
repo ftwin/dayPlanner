@@ -10,22 +10,47 @@ $('form').on('submit', function(event) {
     event.preventDefault();
 });
 
-recipeApp.getActivity = function() {    
-    $.ajax({
-        url: 'http://www.boredapi.com/api/activity/',
-        dataType: 'json',
-        method: 'GET',
+
+//trying out proxy server
+recipeApp.getActivity = function() {  
+$.ajax({
+    url: 'http://proxy.hackeryou.com',
+    dataType: 'json',
+    method:'GET',
+    data: {
+        reqUrl: 'http://www.boredapi.com/api/activity/',
         data: {
             "accessibility": recipeApp.active
-        }        
-    }).then(function(data) {
-        console.log(data);
-        activity = data.activity.toLowerCase();
+        },
+        proxyHeaders: {
+            'Some-Header': 'goes here'
+        },
+    }
+}).then(function(data) {
+    console.log(data);
+    activity = data.activity.toLowerCase();
 
-    }).fail(function(error){
-        console.log(error);
-    });
+}).fail(function(error){
+    console.log(error);
+});
 }
+
+// recipeApp.getActivity = function() {    
+//     $.ajax({
+//         url: 'http://www.boredapi.com/api/activity/',
+//         dataType: 'json',
+//         method: 'GET',
+//         data: {
+//             "accessibility": recipeApp.active
+//         }        
+//     }).then(function(data) {
+//         console.log(data);
+//         activity = data.activity.toLowerCase();
+
+//     }).fail(function(error){
+//         console.log(error);
+//     });
+// }
 
 
 recipeApp.getRecipe = function() {
