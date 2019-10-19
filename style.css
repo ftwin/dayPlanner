@@ -42,40 +42,48 @@ body {
 
 h1 {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 7rem;
-    line-height: 9rem;
+    font-size: 7.2rem;
+    line-height: 8.8rem;
     text-transform: capitalize;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 h2 {
     font-size: 2.4rem;
-    padding: 2rem 0;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
 
 div {
-    padding: 20px 0;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 3rem;
+    margin: 0 auto;
 }
 
 .radioButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.submit {
-    padding-top: 3.8rem;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .container {
     background-image: linear-gradient(rgba(105, 235, 208, 1), rgba(234, 242, 227, 1));
-    width: 1400px;
-    max-width: 75%;
+    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
+    padding: 0;
 }
 
 .insideContainer {
     padding: 0;
-    max-width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -134,10 +142,6 @@ input[type=submit]:hover {
     border-color: #ffffff;
 }
 
-p {
-    line-height: 4rem;
-}
-
 .results {
     font-size: 2.4rem;
     line-height: 4.8rem;
@@ -148,33 +152,29 @@ p {
 /* iPad Pro */
 @media (max-width: 1200px) {
     .container {
-        max-width: 90%;
+        width: 90%;
     }
 
     h1 {
         font-size: 6rem;
-        line-height: 8.5rem;
+        line-height: 7.2rem;
     }
 }
   
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
     .containter {
-        max-width: 100%;
+        width: 100%;
     }
 
     h1 {
         font-size: 5rem;
-        line-height: 7rem;
+        line-height: 6rem;
     }
 
     h2 {
         font-size: 2rem;
-        padding: 1.5rem 0;
-    }
-
-    div {
-        padding: 10px 0;
+        padding: 0.8rem 2rem;
     }
 
     body {        
@@ -183,12 +183,10 @@ p {
 
     p {
         line-height: 2rem;
-        margin: 1rem;
     }
 
     .insideContainer {
-        max-width: 85%;
-        margin: 0 auto;
+        width: 85%;
     }
 
     .results {
@@ -206,16 +204,25 @@ p {
         padding: 1rem 5rem;
         letter-spacing: 1px;
     }
-
-    .submit {
-        padding-top: 2rem;
-    }
 }
   
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .container {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    .insideContainer {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        line-height: 5.4rem;
+    }
+    
+    .radioButtons {
+        padding-bottom: 0;
     }
 }
 
@@ -224,18 +231,12 @@ p {
 @media (max-width: 480px) {
     h1 {
         font-size: 3.8rem;
-        line-height: 4.9rem;
-        margin: 1rem auto;
+        line-height: 4.6rem;
     }
 
     h2 {
         font-size: 1.8rem;
-        padding: 1.35rem 0;
-        margin: 0 auto;
-    }
-
-    div, p {
-        margin: 0 auto;
+        padding: 0 0 1.35rem 0;
     }
 
     input[type=radio]+label {
@@ -258,16 +259,11 @@ p {
     h1 {
         font-size: 3rem;
         line-height: 4rem;
-        margin: 1rem auto;
     }
 
     h2 {
         font-size: 1.6rem;
-        padding: 1rem 0;
-        margin: 0 auto;
-    }
-
-    div, p {
+        padding: 0 0 0.75rem 0;
         margin: 0 auto;
     }
 
@@ -275,11 +271,4 @@ p {
         line-height: 2rem;
     }
 
-    .radioButtons {
-        padding-bottom: 0;
-    }
-
-    .submit {
-        padding-top: .5rem;
-    }
 }
