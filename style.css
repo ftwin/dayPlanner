@@ -37,7 +37,8 @@ body {
     font-family: 'Lora', serif;
     text-align: center;
     font-size: 1.8rem;
-    background-color: rgb(226, 250, 255);
+    background-image: linear-gradient(rgba(105, 235, 208, 1), rgba(234, 242, 227, 1));
+    min-height: 100vh;
 }
 
 h1 {
@@ -53,6 +54,11 @@ h2 {
     font-size: 2.4rem;
     margin: 0 auto;
     padding: 1rem 0;
+}
+
+.finePrint {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 div {
@@ -74,7 +80,6 @@ p {
 }
 
 .container {
-    background-image: linear-gradient(rgba(105, 235, 208, 1), rgba(234, 242, 227, 1));
     max-width: 1200px;
     width: 80%;
     margin: 0 auto;
@@ -132,7 +137,7 @@ input[type=submit] {
     padding: 1rem 6rem;
     border: 2px solid rgba(105, 235, 208, 0.2);
     border-radius: 5px;
-    background-color: rgba(105, 235, 208, 0.2);
+    background-color: rgba(105, 235, 208, 0.4);
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -145,7 +150,16 @@ input[type=submit]:hover {
 .results {
     font-size: 2.4rem;
     line-height: 4.8rem;
-    padding: 20px;
+    background: rgba(250,250,250,0.5);
+    padding: 20px 20px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all ease 1000ms;
+}
+
+.results.visible{
+    opacity: 1;
+    margin-bottom: 20px;
 }
 
 
@@ -192,6 +206,10 @@ input[type=submit]:hover {
     .results {
         font-size: 2rem;
         line-height: 4.1rem;
+        padding: 0;
+    }
+
+    .results.visible {
         padding: 10px;
     }
 
@@ -203,6 +221,9 @@ input[type=submit]:hover {
         font-size: 2.1rem;
         padding: 1rem 5rem;
         letter-spacing: 1px;
+    }
+    .radioButtons {
+        width: 100%;
     }
 }
   
@@ -236,11 +257,20 @@ input[type=submit]:hover {
 
     h2 {
         font-size: 1.8rem;
-        padding: 0 0 1.35rem 0;
+        padding: 0 0 0.5rem;
+    }
+
+    div {
+        padding-bottom: 2px;
+    }
+
+    .finePrint {
+        padding-bottom: 1rem;
     }
 
     input[type=radio]+label {
         line-height: 2.5rem;
+        margin: 2px;
     }
 
     input[type=submit] {
@@ -251,6 +281,11 @@ input[type=submit]:hover {
 
     .submit {
         padding-top: .5rem;
+        margin-bottom: 20px;
+    }
+    .results {
+        font-size: 1.6rem;
+        line-height: 3rem;
     }
 }
 

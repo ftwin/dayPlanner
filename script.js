@@ -27,31 +27,12 @@ $.ajax({
         },
     }
 }).then(function(data) {
-    console.log(data);
     activity = data.activity.toLowerCase();
 
 }).fail(function(error){
     console.log(error);
 });
 }
-
-// recipeApp.getActivity = function() {    
-//     $.ajax({
-//         url: 'http://www.boredapi.com/api/activity/',
-//         dataType: 'json',
-//         method: 'GET',
-//         data: {
-//             "accessibility": recipeApp.active
-//         }        
-//     }).then(function(data) {
-//         console.log(data);
-//         activity = data.activity.toLowerCase();
-
-//     }).fail(function(error){
-//         console.log(error);
-//     });
-// }
-
 
 recipeApp.getRecipe = function() {
     $.ajax({
@@ -66,17 +47,10 @@ recipeApp.getRecipe = function() {
     })
 
     .then(function(data) {
-        console.log(data);
-
+         console.log(data);
         randomNumber = Math.floor(Math.random() * 10)
-        console.log(randomNumber)
-        
         recipeId = data.results[randomNumber].id
         recipe = data.results[randomNumber].title
-        
-        
-
-        
     })
 
     .then(function(){
@@ -92,22 +66,23 @@ recipeApp.getRecipe = function() {
         })
 
         .then(function(data) {
-            console.log(data)
             recipeURL = data.sourceUrl
+            console.log(data);
 
             //print results in html
-            $('.results').html(`You should make some <a href="${recipeURL}">${recipe}</a> and ${activity}.`)
+            $('.results').html(`You should make some <a href="${recipeURL}">${recipe}</a> and ${activity}.`).addClass('visible');
         })
 
         .fail(function(error) {
-            console.log(error)
+            console.log(error);
+            $('.results').html(`An error occured. Please try again.`).addClass('visible');
         })
     })
     
     .fail(function(error){
         console.log(error)
         //print results in html
-        $('.results').html(`No suggestions. Please try again.`)
+        $('.results').html(`No suggestions. Please try again.`).addClass('visible');
     })
 }
 
